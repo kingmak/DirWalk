@@ -66,7 +66,7 @@ try:
         walk()
 
     elif len(args) == 2:
-        if args[1] == "-c":
+        if args[1] == '-c':
             walkOne()
         else:
             walk(args[1])
