@@ -63,7 +63,7 @@ usage = 'Usage:\n\npython dirWalk.py\npython dirWalk.py -c\npython dirWalk.py ~/
 
 try:
     if len(args) == 1:
-        walk(os.getcwd())
+        walk()
 
     elif len(args) == 2:
         if args[1] == "-c":
