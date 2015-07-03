@@ -1,21 +1,14 @@
-# note: if we need to change the value of a var outside func
-# then we use the global keyword
+# Linux & Mac Version
 
-import os, sys, platform
+import os, sys
 
 fileCount = 0
 folderCount = 0
 weird = 0
 
-fileColor = ''
-folderColor = ''
-statColor = ''
-_os = platform.platform()
-
-if 'Linux' in _os or 'Darwin' in _os:
-    fileColor = '"\033[34m'
-    folderColor = '"\033[32m'
-    statColor = '"\033[36m'
+fileColor = '"\033[34m'
+folderColor = '"\033[32m'
+statColor = '"\033[36m' 
 
 # too lazy to do the logic in one function
 def walkOne(directory = os.getcwd()):
@@ -36,7 +29,6 @@ def walkOne(directory = os.getcwd()):
 
         else:
             weird += 1
-        #else: print 'SOMETHING IS BROKEN, path is = ' + path
 
 def walk(directory = os.getcwd() , spaceCount = 0):
     global fileCount, folderCount, weird
@@ -80,4 +72,4 @@ try:
 except Exception, e:
     sys.exit('error: ' + str(e) + '\n' + usage)
 
-os.system('echo ' + statColor + ('\n%d Files, %d Folders & %d weird objects in total' % (fileCount, folderCount, weird)) + '"')
+os.system('echo ' + statColor + ('\n%d Files, %d Folders & %d other objects in total' % (fileCount, folderCount, weird)) + '"')
