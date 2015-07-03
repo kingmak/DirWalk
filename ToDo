@@ -1,3 +1,4 @@
-- HOT: somefiles not being detected [Linux / Win]
+- HOT: somefiles not being detected [Linux & Win]
 - make this a commandline tool?
-- leave else in release version?
+- add write to file support
+- in LinuxWalk: find a way to use python's print. Seems like its faster then echo
